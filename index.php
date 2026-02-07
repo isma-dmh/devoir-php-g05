@@ -9,7 +9,7 @@ header("Location: ./");
 
 }
 
-$title="Home";
+$title="Accueil";
 $nav="accueil";
 require "./header.php";
 

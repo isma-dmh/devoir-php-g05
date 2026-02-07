@@ -1,37 +1,33 @@
 <?php
 
 session_start();
-$title = "Addition";
-$nav = "addition";
+$title = "Conversion";
+$nav = "euroFrancsRdc";
 require "./header.php";
 require "./fonctions/functionsMath.php";
 
+if (!connected($_SESSION)) {
 
-if (!connected($_SESSION)){
-
-header("Location: ./login.php");
-
+    header("Location: ./login.php");
 }
 
 if (isset($_POST["nb1"]) && isset($_POST["nb2"])) {
 
-    if($_POST["nb1"]!=""&& $_POST["nb2"]!=""){
+    if ($_POST["nb1"] != "" && $_POST["nb2"] != "") {
 
-        
-        $_SESSION["operation"][] = addition($_POST["nb1"], $_POST["nb2"]);
-        
+        $_SESSION["operation"][] = soustraction($_POST["nb1"], $_POST["nb2"]);
+
         $_SESSION["operationCount"]++;
         $_SESSION["totalOperation"]++;
     }
-    
 };
-
 
 ?>
 
 <div class="calcul">
 
-    <h3>Addition</h3>
+    <h3>Soustraction</h3>
+
 
 
     <form method="post">
@@ -57,12 +53,11 @@ if (isset($_POST["nb1"]) && isset($_POST["nb2"])) {
 
         </div>
 
-        <div class="svg-container">
+        <div class="svg-container red">
 
 
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-plus text-blue-600" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-minus text-red-600" aria-hidden="true">
                 <path d="M5 12h14"></path>
-                <path d="M12 5v14"></path>
             </svg>
 
         </div>
@@ -86,7 +81,6 @@ if (isset($_POST["nb1"]) && isset($_POST["nb2"])) {
                                                             endif; ?>">
 
 
-
         </div>
 
         <div class="svg-container green">
@@ -107,20 +101,18 @@ if (isset($_POST["nb1"]) && isset($_POST["nb2"])) {
 
                                                                             if ($_POST["nb1"] != "" && $_POST["nb2"] != ""):
 
-                                                                                echo (int)$_POST["nb1"] + (int)$_POST["nb2"];
+                                                                                echo (int)$_POST["nb1"] - (int)$_POST["nb2"];
 
                                                                             else: ?>?<?php
                                                                             endif; ?><?php else: ?>?<?php endif; ?>">
 
         </div>
 
-
-
         <button type="submit" class="blue"> Calculer </button>
 
     </form>
 
-    <h3 class="background"> 💡 L'addition vous permet d'additionner deux nombres ensemble </h3>
+    <h3 class="background"> 💡 La soustraction vous permet de soustraire le deuxième nombre du premier </h3>
 
 </div>
 

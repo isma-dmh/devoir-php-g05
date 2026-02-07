@@ -1,8 +1,8 @@
 <?php
 
 session_start();
-$title = "Soustraction";
-$nav = "soustraction";
+$title = "Conversion";
+$nav = "euroYen";
 require "./header.php";
 require "./fonctions/functionsMath.php";
 
@@ -15,7 +15,8 @@ if (isset($_POST["nb1"]) && isset($_POST["nb2"])) {
 
     if ($_POST["nb1"] != "" && $_POST["nb2"] != "") {
 
-        $_SESSION["operation"][] = soustraction($_POST["nb1"], $_POST["nb2"]);
+
+        $_SESSION["operation"][] = multiplication($_POST["nb1"], $_POST["nb2"]);
 
         $_SESSION["operationCount"]++;
         $_SESSION["totalOperation"]++;
@@ -26,7 +27,7 @@ if (isset($_POST["nb1"]) && isset($_POST["nb2"])) {
 
 <div class="calcul">
 
-    <h3>Soustraction</h3>
+    <h3>Multiplication</h3>
 
 
 
@@ -53,11 +54,12 @@ if (isset($_POST["nb1"]) && isset($_POST["nb2"])) {
 
         </div>
 
-        <div class="svg-container red">
+        <div class="svg-container purple ">
 
 
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-minus text-red-600" aria-hidden="true">
-                <path d="M5 12h14"></path>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x text-purple-600" aria-hidden="true">
+                <path d="M18 6 6 18"></path>
+                <path d="m6 6 12 12"></path>
             </svg>
 
         </div>
@@ -101,10 +103,11 @@ if (isset($_POST["nb1"]) && isset($_POST["nb2"])) {
 
                                                                             if ($_POST["nb1"] != "" && $_POST["nb2"] != ""):
 
-                                                                                echo (int)$_POST["nb1"] - (int)$_POST["nb2"];
+                                                                                echo (int)$_POST["nb1"] * (int)$_POST["nb2"];
 
                                                                             else: ?>?<?php
                                                                             endif; ?><?php else: ?>?<?php endif; ?>">
+
 
         </div>
 
@@ -112,7 +115,7 @@ if (isset($_POST["nb1"]) && isset($_POST["nb2"])) {
 
     </form>
 
-    <h3 class="background"> 💡 La soustraction vous permet de soustraire le deuxième nombre du premier </h3>
+    <h3 class="background"> 💡 La multiplication vous permet de multiplier deux nombres ensemble </h3>
 
 </div>
 
