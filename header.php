@@ -45,7 +45,7 @@
 
         <div class="group">
 
-            <i class="fas fa-calculator"></i>
+            <img class="logo" src="./assets/images/image.png"></i>
 
             <div>
 
