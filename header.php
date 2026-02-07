@@ -49,7 +49,8 @@
 
             <div>
 
-                <h1>CFI Tech Calculator</h1>
+                <h1>CFI Tech currency converter
+                </h1>
                 <span> Projet PHP Mini </span>
 
             </div>
@@ -97,7 +98,7 @@
 
             <a href="./profil.php" class="nav <?php if ($nav == "profil"): ?>light<?php endif; ?>">Profil</a>
 
-            <a href="./bd.php" class="nav <?php if ($nav == "database"): ?>light<?php endif; ?>"<?php if (!connected($_SESSION)): ?> style="display: none" <?php endif; ?>>Base de données</a>
+            <a href="./bd.php" class="nav <?php if ($nav == "database"): ?>light<?php endif; ?>" <?php if (!connected($_SESSION)): ?> style="display: none" <?php endif; ?>>Base de données</a>
 
             <a href="./logout.php" class="nav" <?php if (!connected($_SESSION)): ?> style="display: none" <?php endif; ?>>Déconnexion</a>
 
