@@ -1,8 +1,8 @@
 <?php
 
 session_start();
-$title = "Division";
-$nav = "division";
+$title = "Conversion";
+$nav = "euroPounds";
 require "./header.php";
 require "./fonctions/functionsMath.php";
 

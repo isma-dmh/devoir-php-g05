@@ -73,19 +73,7 @@
            padding: 1rem 2rem;
            align-items: center;
            color: white;
-           background:
-               radial-gradient(circle at top left,
-                   #4e6ec7 15%,
-                   transparent 15%,
-                   transparent 80%),
-
-               radial-gradient(circle at bottom right,
-
-                   #4e6ec7 15%,
-                   transparent 15%,
-                   transparent 80%),
-
-               #274ec1;
+           background: rgba(66, 68, 70, 0.425);
 
            .group {
 
@@ -192,13 +180,6 @@
                            align-items: center;
                            gap: 1rem;
                            width: 100%;
-
-
-                           .operateur {
-
-                               font-size: larger;
-
-                           }
 
 
                        }

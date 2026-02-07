@@ -36,7 +36,7 @@ if (!isset($_SESSION["connected"]) || !$_SESSION["connected"]) {
 }
 
 
-$title = "Mon profile";
+$title = "Profil";
 $nav = "profil";
 require "./header.php";
 require "./fonctions/lastOperation.php";
