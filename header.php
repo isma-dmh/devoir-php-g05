@@ -107,6 +107,11 @@
 
             <a href="./login.php" class="nav <?php if ($nav == "login"): ?>light<?php endif; ?>" <?php if (connected($_SESSION)): ?> style="display: none" <?php endif; ?>>login</a>
 
+                <form action="" id="dark">
+
+                    <button type="submit" class="svg-container2"><img id="buttonDark" src="./assets/images/svg/on.svg" alt=""></button>   
+                    
+                </form>
         </nav>
 
     </header>
