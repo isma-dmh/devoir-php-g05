@@ -133,7 +133,7 @@ require "./fonctions/lastOperation.php";
 
                 <h3> Dernières opérations </h3>
 
-                <div class="last addition">
+                <div class="last-conversion">
 
                     <?php $lastCurrency = $_SESSION["currency"]["currency" . $_SESSION["currencyCount"]] ?>
 
@@ -154,9 +154,9 @@ require "./fonctions/lastOperation.php";
 
                     <div class="bloc-ope">
 
-                        <h4 class="nb1"> Montant </h4>
-                        <h4 class="nb2"> Devise convertie </h4>
-                        <h4 class="nb3"> Devise cible </h4>
+                        <h4> Montant </h4>
+                        <h4> Devise convertie </h4>
+                        <h4> Devise cible </h4>
 
 
                     </div>

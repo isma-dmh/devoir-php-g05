@@ -37,7 +37,7 @@ if (!empty($_POST["value1"]) && !empty($_POST["value2"] && !empty($_POST["multip
 
 ?>
 
-<div class="calcul">
+<div class="conversion">
 
     <h3>Conversion</h3>
 

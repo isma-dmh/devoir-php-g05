@@ -24,10 +24,7 @@
 
    body {
 
-       --color-addition: blue;
-       --color-soustraction: red;
-       --color-multiplication: purple;
-       --color-division: brown;
+
 
        --back-color-addition: #e5effd;
        --back-color-soustraction: #fff2f3;
@@ -188,7 +185,7 @@
                }
 
 
-               .calculatrice {
+               .conversion {
 
                    transition: 0.2s ease-in-out;
                    padding: 0.8rem;
@@ -237,7 +234,7 @@
 
                }
 
-               .calculatrice:hover {
+               .conversion:hover {
 
                    background-color: #4e6ec7;
                    border-radius: 15px;
@@ -271,8 +268,8 @@
 
                #formSearch {
 
-                display: flex;
-                gap: 10px;
+                   display: flex;
+                   gap: 10px;
 
                    #inputSearch {
 
@@ -282,11 +279,11 @@
 
                    }
 
-                   button{
+                   button {
 
-                    border: solid 0px;
-                    padding: 5px;
-                    border-radius: 5px;
+                       border: solid 0px;
+                       padding: 5px;
+                       border-radius: 5px;
 
                    }
 
@@ -387,6 +384,7 @@
                h1 {
 
                    margin-bottom: 1rem;
+                   color: orange;
 
                }
 
@@ -458,231 +456,6 @@
            }
 
 
-           .reset {
-
-
-               background-color: white;
-               min-width: 250px;
-               width: 70%;
-               margin: auto;
-               padding: 2rem;
-               border-radius: 10px;
-               text-align: center;
-               line-height: 2rem;
-               display: flex;
-               flex-direction: column;
-               align-items: center;
-               gap: 2rem;
-               box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.477);
-
-
-               h3 {
-
-                   display: flex;
-                   align-items: center;
-                   gap: 0.5rem;
-                   justify-content: center;
-                   flex-wrap: wrap;
-
-                   svg {
-
-                       color: red;
-                       background-color: #ffe1e4;
-                       width: 3rem;
-                       height: 3rem;
-                       padding: 0.5rem;
-                       border-radius: 50%;
-
-                   }
-
-               }
-
-
-               .warning {
-
-                   background-color: #ffe1e4;
-                   padding: 2rem 4rem;
-                   width: 90%;
-                   margin: auto;
-                   box-shadow: inset 5px 0px 0 0 red;
-                   overflow: hidden;
-
-
-
-                   .danger {
-
-                       position: relative;
-                       top: 0;
-                       left: 0;
-
-                   }
-
-                   h4 {
-
-                       color: red;
-
-                   }
-
-
-                   ul {
-
-                       color: rgb(241, 87, 87);
-                       margin-top: 1rem;
-
-                   }
-
-               }
-
-               button {
-
-                   max-width: 250px;
-                   margin: auto;
-                   padding: 1rem;
-                   border-radius: 5px;
-                   border: solid 1px red;
-                   display: flex;
-                   align-items: center;
-                   justify-content: center;
-                   gap: 0.5rem;
-
-               }
-
-
-           }
-
-           .session {
-
-
-               background-color: white;
-               min-width: 250px;
-               width: 70%;
-               margin: auto;
-               padding: 2rem;
-               border-radius: 10px;
-               text-align: center;
-               line-height: 2rem;
-               display: flex;
-               flex-direction: column;
-               align-items: center;
-               gap: 2rem;
-               box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.477);
-
-               h3 {
-
-                   display: flex;
-                   align-items: center;
-                   gap: 0.5rem;
-                   justify-content: center;
-                   flex-wrap: wrap;
-
-                   svg {
-
-                       color: #d08700;
-                       background-color: #fefce8;
-                       width: 3rem;
-                       height: 3rem;
-                       padding: 0.5rem;
-                       border-radius: 50%;
-
-                   }
-
-               }
-
-               .indication {
-
-                   background-color: #fefce8;
-                   color: #d08700;
-                   padding: 2rem 4rem;
-                   width: 99%;
-                   margin: auto;
-                   box-shadow: inset 5px 0px 0 0 #d08700;
-                   overflow: hidden;
-
-               }
-
-
-               .var-session {
-
-                   background-color: #101828;
-                   min-width: 250px;
-                   min-height: 150px;
-                   width: 99%;
-                   border-radius: 10px;
-                   color: rgb(4, 255, 4);
-                   text-align: left;
-                   padding: 1rem;
-
-               }
-
-
-               .info {
-
-                   display: flex;
-                   flex-wrap: wrap;
-                   gap: 1rem;
-                   width: 99%;
-
-               }
-
-               .card-info {
-
-                   flex: 1 1 calc(50% - 1rem);
-                   background-color: #eff6ff;
-                   padding: 1rem;
-                   border-radius: 10px;
-
-               }
-
-               .card1,
-               .card4 {
-
-                   h2 {
-
-                       color: rgb(255, 0, 0);
-                   }
-
-               }
-
-               .card2,
-               .card3 {
-
-                   h2 {
-
-                       color: blue;
-
-                   }
-
-               }
-
-
-               .operation {
-
-                   display: flex;
-                   width: 99%;
-                   gap: 1rem;
-                   background-color: #f2f5f6;
-                   padding: 0.5rem;
-                   border-radius: 10px;
-
-                   .ope {
-
-                       flex: 1 auto;
-                       text-align: right;
-
-                   }
-
-                   .number {
-
-                       width: 2rem;
-                       height: 2rem;
-                       border-radius: 10px;
-                       background-color: #bedafe;
-
-                   }
-
-               }
-
-           }
 
            .profil {
 
@@ -824,34 +597,14 @@
                            padding: 2rem;
                            box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.477);
 
-                           .addition {
+                           .last-conversion {
 
-                               background-color: var(--back-color-addition);
+                               background-color: #e5effd;
                                padding: 1rem;
                                border-radius: 10px;
 
                            }
 
-                           .soustraction {
-
-                               background-color: var(--back-color-soustraction);
-                               padding: 1rem;
-                               border-radius: 10px;
-                           }
-
-                           .multiplication {
-
-                               background-color: var(--back-color-multiplication);
-                               padding: 1rem;
-                               border-radius: 10px;
-                           }
-
-                           .division {
-
-                               background-color: var(--back-color-division);
-                               padding: 1rem;
-                               border-radius: 10px;
-                           }
 
                        }
 
@@ -997,7 +750,7 @@
            }
 
 
-           .calcul {
+           .conversion {
 
                background-color: white;
                display: flex;
@@ -1283,7 +1036,7 @@
                }
 
 
-               .calculatrice ul {
+               .conversion ul {
 
 
 
@@ -1332,7 +1085,7 @@
 
        }
 
-       body main .calcul {
+       body main .conversion {
 
 
 
@@ -1388,15 +1141,6 @@
 
 
                    flex-direction: column;
-
-                   .nb1,
-                   .nb2,
-                   .nb3 {
-
-
-                       flex-basis: auto;
-
-                   }
 
 
                }
@@ -1455,11 +1199,9 @@
 
            .main,
            .card,
-           .reset,
-           .session,
            .profil,
            .log,
-           .calcul {
+           .conversion {
 
                width: 100%;
                padding: 1rem 0;
