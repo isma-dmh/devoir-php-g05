@@ -141,21 +141,28 @@ dark.addEventListener("submit", (e) => {
     document.body.classList.toggle("backDark");
     buttonDark.classList.toggle("yellow");
 
-    
+
 
     if (document.body.classList.contains("backDark")) {
 
-        buttonDark.setAttribute("src","./assets/images/svg/on.svg");
-        
+        buttonDark.setAttribute("src", "./assets/images/svg/on.svg");
+
 
     } else {
 
-    buttonDark.setAttribute("src","./assets/images/svg/off.svg");
-        
-        
+        buttonDark.setAttribute("src", "./assets/images/svg/off.svg");
+
+
 
     }
 
 
 
 })
+
+
+function actualiser() {
+    document.querySelector("#horloge").textContent = new Date().toLocaleString('fr-FR');
+}
+setInterval(actualiser, 1000);
+actualiser();
