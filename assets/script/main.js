@@ -1,17 +1,20 @@
-import { switchCurrency} from "./fonction.js";
+import { switchCurrency } from "./fonction.js";
 let button = document.querySelector("#buttonSwitch");
 let devises = document.querySelectorAll(".devise");
 let devise1 = devises[0];
 let devise2 = devises[1];
 let inputdevise1 = document.querySelector("#value1");
 let inputdevise2 = document.querySelector("#value2");
+let dark = document.querySelector("#dark");
+let buttonDark = document.querySelector("#buttonDark");
+
 
 
 
 try {
 
 
-    switchCurrency(button, devise1, devise2,inputdevise1,inputdevise2);
+    switchCurrency(button, devise1, devise2, inputdevise1, inputdevise2);
 
 
 } catch { }
@@ -127,4 +130,32 @@ try {
         }
 
     }
-}catch{}
+} catch { }
+
+
+
+
+dark.addEventListener("submit", (e) => {
+
+    e.preventDefault();
+    document.body.classList.toggle("backDark");
+    buttonDark.classList.toggle("yellow");
+
+    
+
+    if (document.body.classList.contains("backDark")) {
+
+        buttonDark.setAttribute("src","./assets/images/svg/on.svg");
+        
+
+    } else {
+
+    buttonDark.setAttribute("src","./assets/images/svg/off.svg");
+        
+        
+
+    }
+
+
+
+})
