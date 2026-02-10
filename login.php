@@ -39,7 +39,7 @@ background-color: white;
     </div>
     <h3>Connexion</h3>
 
-    <p class="gris"> Connectez-vous pour accéder à la calculatrice </p>
+    <p class="gris"> Connectez-vous pour accéder à l'outil de conversion </p>
 
         <?php if (isset($_SESSION["checkMdp"]) && isset($_SESSION["checkName"])):
 
