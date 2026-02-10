@@ -66,7 +66,7 @@
 
             <a href="./index.php" class="nav <?php if ($nav == "accueil"): ?>light<?php endif; ?>">Accueil</a>
 
-            <div class="nav calculatrice" <?php if (!connected($_SESSION)): ?> style="display: none" <?php endif; ?>>
+            <div class="nav conversion" <?php if (!connected($_SESSION)): ?> style="display: none" <?php endif; ?>>
 
                 <p>
 
