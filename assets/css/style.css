@@ -269,6 +269,28 @@
 
                }
 
+               #formSearch {
+
+                display: flex;
+                gap: 10px;
+
+                   #inputSearch {
+
+                       border-radius: 5px;
+                       padding: 5px;
+                       border: solid 0px;
+
+                   }
+
+                   button{
+
+                    border: solid 0px;
+                    padding: 5px;
+                    border-radius: 5px;
+
+                   }
+
+               }
            }
 
 

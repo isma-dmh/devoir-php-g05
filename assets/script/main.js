@@ -7,6 +7,8 @@ let inputdevise1 = document.querySelector("#value1");
 let inputdevise2 = document.querySelector("#value2");
 let dark = document.querySelector("#dark");
 let buttonDark = document.querySelector("#buttonDark");
+let formSearch = document.querySelector("#formSearch");
+let inputSearch = formSearch.querySelector("#inputSearch");
 
 
 
@@ -166,3 +168,12 @@ function actualiser() {
 }
 setInterval(actualiser, 1000);
 actualiser();
+
+formSearch.addEventListener("submit",(e)=>{
+
+e.preventDefault();
+
+window.find(inputSearch.value);
+
+
+})

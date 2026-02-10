@@ -99,6 +99,7 @@
 
             </div>
 
+
             <a href="./profil.php" class="nav <?php if ($nav == "profil"): ?>light<?php endif; ?>">Profil</a>
 
             <a href="./jeuxMonnaies.php" class="nav <?php if ($nav == "jeuxMonnaies"): ?>light<?php endif; ?>">Jeux des monnaies</a>
@@ -106,6 +107,14 @@
             <a href="./logout.php" class="nav" <?php if (!connected($_SESSION)): ?> style="display: none" <?php endif; ?>>Logout</a>
 
             <a href="./login.php" class="nav <?php if ($nav == "login"): ?>light<?php endif; ?>" <?php if (connected($_SESSION)): ?> style="display: none" <?php endif; ?>>login</a>
+
+                <form action="" id="formSearch">
+
+                 <input id="inputSearch" type="search" placeholder="Recherche">
+                 <button type="submit"> Search </button>
+                    
+                    
+                </form>
 
                 <form action="" id="dark">
 
