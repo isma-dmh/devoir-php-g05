@@ -1,13 +1,12 @@
 <?php
 
 session_start();
-$nav="login";
+$nav = "login";
 require "./header.php";
 
-if(connected($_SESSION)){
+if (connected($_SESSION)) {
 
-header("Location: ./profil.php");
-
+    header("Location: ./profil.php");
 }
 
 
@@ -16,13 +15,11 @@ header("Location: ./profil.php");
 ?>
 
 <style>
+    body {
 
-body{
+        background-color: white;
 
-background-color: white;
-
-}
-
+    }
 </style>
 
 <div class="log">
@@ -41,35 +38,28 @@ background-color: white;
 
     <p class="gris"> Connectez-vous pour accéder à l'outil de conversion </p>
 
-        <?php if (isset($_SESSION["checkMdp"]) && isset($_SESSION["checkName"])):
+    <?php if (isset($_SESSION["checkUser"])):
 
-        if ($_SESSION["checkMdp"] && $_SESSION["checkName"]): ?>
+        if ($_SESSION["checkUser"]): ?>
 
-            <span style="color: red;"> Veuillez introduire votre nom ! </span>
-            <span style="color: red;"> Veuillez introduire cfitech comme mot de passe ! </span>
-
-        <?php elseif ($_SESSION["checkMdp"]): ?>
-
-            <span style="color: red;"> Veuillez introduire cfitech comme mot de passe ! </span>
-
-        <?php elseif ($_SESSION["checkName"]): ?>
-
-            <span style="color: red;"> Veuillez introduire votre nom ! </span>
+            <span style="color: red;"> Champ Incorrect !!! </span>
 
     <?php endif;
 
-            $_SESSION["checkMdp"]=false;
-            $_SESSION["checkName"]=false;
+        $_SESSION["checkUser"] = false;
 
     endif;  ?>
 
     <form action="./profil.php" method="post">
 
-        <label for="user"> Prénom </label> <br>
-        <input type="text" placeholder="Entrez votre prénom" name="user" id="user"><br>
+        <label for="userLastname"> Nom </label> <br>
+        <input type="text" placeholder="Entrez votre prénom" name="userLastname" id="user lastname"><br>
 
-        <label for="mdp">Mot de passe</label> <br>
-        <input type="password" placeholder="*********" id="mdp" name="mdp"><br>
+        <label for="userFirstname"> Prénom </label> <br>
+        <input type="text" placeholder="Entrez votre prénom" name="userFirstname" id="user firstname"><br>
+
+        <label for="userMdp">Mot de passe</label> <br>
+        <input type="password" placeholder="*********" id="user mdp" name="userMdp"><br>
         <span class="gris">Mot de passe: cfitech</span> <br>
 
         <button type="submit">
@@ -88,7 +78,7 @@ background-color: white;
 
     </form>
 
-    <span class="gris"> Utilisez n'importe quel prénom et le mot de passe "cfitech" </span>
+    <span class="gris"> Utilisez n'importe quel nom et prénom et le mot de passe "cfitech" </span>
 
 </div>
 
