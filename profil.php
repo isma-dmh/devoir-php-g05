@@ -9,24 +9,17 @@ if (!connected($_SESSION)) {
     if (empty($_POST)) {
 
         header("Location: ./login.php");
-    } else if ($_POST["user"] == "" && $_POST["mdp"] != "cfitech") {
+    } else if ($_POST["userFirstname"] == "" || $_POST["userLastname"] == "" || $_POST["userMdp"] != "cfitech") {
 
-        $_SESSION["checkName"] = true;
-        $_SESSION["checkMdp"] = true;
-        header("Location: ./login.php");
-    } else if ($_POST["user"] == "") {
+        $_SESSION["checkUser"] = true;
 
-        $_SESSION["checkName"] = true;
-        header("Location: ./login.php");
-    } else if ($_POST["mdp"] != "cfitech") {
-
-        $_SESSION["checkMdp"] = true;
         header("Location: ./login.php");
     } else {
 
 
         $_SESSION["connected"] = true;
-        $_SESSION["name"] = $_POST["user"];
+        $_SESSION["firstname"] = $_POST["userFirstname"];
+        $_SESSION["lastname"] = $_POST["userLastname"];
         $_SESSION["currencyCount"] = 0;
     }
 }
@@ -36,7 +29,6 @@ $title = "Profil";
 $nav = "profil";
 require "./header.php";
 require "./fonctions/lastOperation.php";
-
 
 
 ?>
@@ -54,7 +46,7 @@ require "./fonctions/lastOperation.php";
 
                 <h3> Mon Profile </h3>
 
-                <p> Bienvenue <?php echo $_SESSION["name"] ?> dans votre page de profile ! </p>
+                <p> Bienvenue <?php echo $_SESSION["firstname"] . " " . $_SESSION["lastname"] ?> dans votre page de profile ! </p>
 
 
             </div>
@@ -179,7 +171,7 @@ require "./fonctions/lastOperation.php";
 
                         </div>
 
-                           <p class="ope"> <?php echo $conversion->getConversion();?></p>
+                        <p class="ope"> <?php echo $conversion->getConversion(); ?></p>
 
                     </div>
 
