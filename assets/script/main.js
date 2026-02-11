@@ -162,12 +162,13 @@ dark.addEventListener("submit", (e) => {
 
 })
 
+// elle ne sert plus a rien
 
-function actualiser() {
-    document.querySelector("#horloge").textContent = new Date().toLocaleString('fr-FR');
-}
-setInterval(actualiser, 1000);
-actualiser();
+// function actualiser() {
+//     document.querySelector("#horloge").textContent = new Date().toLocaleString('fr-FR');
+// }
+// setInterval(actualiser, 1000);
+// actualiser();
 
 formSearch.addEventListener("submit",(e)=>{
 
